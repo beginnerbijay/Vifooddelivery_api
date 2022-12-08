@@ -9,13 +9,7 @@ const { default: mongoose } = require('mongoose')
 const port = process.env.PORT || 5000
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-const corsOptions = {
-    origin: 'https://vifood-delivery-app.onrender.com',
-    optionsSuccessStatus: 200,
-    credentials: true
-}
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 mongoose.connect(process.env.MONGO_URL,
     { 
