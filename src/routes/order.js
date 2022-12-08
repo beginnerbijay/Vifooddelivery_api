@@ -5,7 +5,7 @@ const stripe = require("stripe")("sk_test_51M91SzSFSN1DmySqstmuW4Q9LZlwzeVLYt4HK
 const auth = require('../middlewares/auth') 
 
 router.post("/create-checkout-session",async(req,res)=>{
-  const YOUR_DOMAIN = 'http://127.0.0.1:5173';
+  const YOUR_DOMAIN = 'https://vifood-delivery-app.onrender.com';
   const {cart,user} = req.body
   const userid = JSON.parse(user)._id
   console.log(userid)
